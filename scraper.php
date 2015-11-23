@@ -114,6 +114,9 @@ function validateEntry($id){
 		if ($recordSet[0]['fathername'] != ""){
 			$result = true;	
 		}
+		if ($recordSet[0]['deathdate'] != ""){
+			$result = true;	
+		}
 	} 
 	} catch (Exception $e) {
 	}

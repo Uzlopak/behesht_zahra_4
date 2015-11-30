@@ -45,6 +45,8 @@ for ($id = 900001; $id <= 1200000; $id++) {
 	  	//limit to 5 secs
 	  	if ($delay > 5000000) {
 	  		$delay = 5000000;
+	  	}
+	  	if ($i == 20){
 	  		exit;
 	  	}
 	    usleep($delay);

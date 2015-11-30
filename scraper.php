@@ -27,7 +27,7 @@
 
 <?php
 require 'scraperwiki.php';
-$endtime = time() + (60 * 60); //1h 
+$endtime = time() + (60 * 60) * 6; //1h 
 for ($id = 900001; $id <= 1200000; $id++) {
 	if ($endtime <= time())
 	{
@@ -45,6 +45,7 @@ for ($id = 900001; $id <= 1200000; $id++) {
 	  	//limit to 5 secs
 	  	if ($delay > 5000000) {
 	  		$delay = 5000000;
+	  		exit;
 	  	}
 	    usleep($delay);
 	    ripById($id);
